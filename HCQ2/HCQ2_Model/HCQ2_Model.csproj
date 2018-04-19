@@ -1,0 +1,1599 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{956FAC75-C9F1-43AF-8CA3-C68252421720}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>HCQ2_Model</RootNamespace>
+    <AssemblyName>HCQ2_Model</AssemblyName>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\HCQ2UI\bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="A01.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="A02.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="A03.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="A04.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="A19.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AfterSaleModel\CashDetailModel.cs" />
+    <Compile Include="AfterSaleModel\FacilityPreserveModel.cs" />
+    <Compile Include="AfterSaleModel\ItemPreserve.cs" />
+    <Compile Include="AfterSaleModel\ItemPreserveParam.cs" />
+    <Compile Include="AfterSaleModel\TrackRecordModel.cs" />
+    <Compile Include="AfterSaleModel\TrackRecordParam.cs" />
+    <Compile Include="APPModel\CheckWork.cs" />
+    <Compile Include="APPModel\Compay.cs" />
+    <Compile Include="APPModel\Complaints.cs" />
+    <Compile Include="APPModel\MainCount.cs" />
+    <Compile Include="APPModel\NoticeModel.cs" />
+    <Compile Include="APPModel\ParamModel\AppRegUserModel.cs" />
+    <Compile Include="APPModel\ParamModel\BaseAPI.cs" />
+    <Compile Include="APPModel\ParamModel\CompProInfoParam.cs" />
+    <Compile Include="APPModel\ParamModel\DebtSelModel.cs" />
+    <Compile Include="APPModel\ParamModel\JobEmployModel.cs" />
+    <Compile Include="APPModel\ParamModel\OrgModel.cs" />
+    <Compile Include="APPModel\ParamModel\PostDetialParam.cs" />
+    <Compile Include="APPModel\ParamModel\SysUserModel.cs" />
+    <Compile Include="APPModel\ParamModel\WageGrantParamModel.cs" />
+    <Compile Include="APPModel\ParamModel\WorkParamModel.cs" />
+    <Compile Include="APPModel\Person.cs" />
+    <Compile Include="APPModel\RepeatPerson.cs" />
+    <Compile Include="APPModel\ResultApiModel\BusComProinfoResult.cs" />
+    <Compile Include="APPModel\ResultApiModel\ChartProject.cs" />
+    <Compile Include="APPModel\ResultApiModel\CompanyModel.cs" />
+    <Compile Include="APPModel\ResultApiModel\CompProInfoResult.cs" />
+    <Compile Include="APPModel\ResultApiModel\DebtSelResultModel.cs" />
+    <Compile Include="APPModel\ResultApiModel\DebtWGJG01Model.cs" />
+    <Compile Include="APPModel\ResultApiModel\EnterModel.cs" />
+    <Compile Include="APPModel\ResultApiModel\EntModelResult.cs" />
+    <Compile Include="APPModel\ResultApiModel\JobEmployResultModel.cs" />
+    <Compile Include="APPModel\ResultApiModel\LoginAPPResultModel.cs" />
+    <Compile Include="APPModel\ResultApiModel\PostDetialResultModel.cs" />
+    <Compile Include="APPModel\ResultApiModel\ToWorkResultModel.cs" />
+    <Compile Include="APPModel\ResultApiModel\WageDetialResult.cs" />
+    <Compile Include="APPModel\ResultApiModel\WorkMonthResult.cs" />
+    <Compile Include="APPModel\ResultApiModel\WorkTypeCount.cs" />
+    <Compile Include="APPModel\ToDo.cs" />
+    <Compile Include="APPModel\WorkPerson.cs" />
+    <Compile Include="App_person_salary_sign_Result.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="App_person_work_sign_Result.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ATTACHJOB.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Auth_Define_DataScope.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Auth_Define_DataScopeItem.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Auth_Define_Func.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Auth_Define_SetDB.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Auth_Define_SetItem.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Auth_Define_SetTable.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Auth_OrgRole.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Auth_Permission.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Auth_PermissionScope.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Auth_Role.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Auth_SecretLogin.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Auth_User.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Auth_UserGroup.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Auth_UserGroupRole.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Auth_UserLogon.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Auth_UserRole.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Auth_UserWeixin.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="B01.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BB_CashDetail.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BB_DW.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BB_DWLevel.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BB_DWLevelUser.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BB_DWState.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BB_DWStateCheckResult.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BB_DWTotal.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BB_FacilityPreserve.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BB_FetchDataSetup.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BB_FetchFC.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BB_FetchNumberFunc.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BB_FetchPoolLog.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BB_InternalReciveLog.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BB_InternalSend.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BB_ItemPreserve.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BB_PactDetailFlie.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BB_ServiceUser.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BB_SJ_DataSpecial.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BB_SJ_NoteFloat.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BB_SJ_NoteText.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BB_TB.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BB_TBClass.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BB_TBDataHint.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BB_TBItems.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BB_TBRemarkUserLevel.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BB_TBRemarkUsers.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BB_TotalFC.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BB_TrackRecord.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BB_Type.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BB_TypeCycle.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BB_UpDataLog.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BB_ZB.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BB_ZBCondition.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BB_ZBVarItems.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BMQ_Document.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BPM_AgencyRule.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BPM_AgencyRuleAssignee.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BPM_AgencyRuleProcess.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BPM_Define_ActionListener.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BPM_Define_ActorAdapter.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BPM_Define_ActorAdapter_bak.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BPM_Define_Catalog.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BPM_Define_Const.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BPM_Define_DataModel.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BPM_Define_Form.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BPM_Define_Package.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BPM_Define_ProcessDraft.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BPM_Define_ProcessPublished.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BPM_Define_Scheme.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BPM_D_AskForLeaveDemo_Main.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BPM_D_Leave_Main.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BPM_D_NewEmployees_Main.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BPM_Run_Instance.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BPM_Run_ProcessLog.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BPM_Run_SchemeJob.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BPM_Run_SharedTask.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BPM_Run_Tracking.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BPM_Run_Urged.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BPM_Run_Variable.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BPM_Run_WorkTask.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BPM_Run_WorkTaskOpinion.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BPM_UserExtInfo.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BPM_UsuallyOpinion.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Cache_BlobInfo.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Cache_StatData.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Com_Catalog.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Com_Formula.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Com_JetTableItems.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Com_JetTableMain.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Com_LimitItems.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Com_LimitMain.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Com_MusterSimple.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Com_MusterSimpleFields.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Com_RelationBody.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Com_RelationMain.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Com_SortItems.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Com_SortMain.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Com_StatAnalysisItems.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Com_StatAnalysisMain.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Com_StatLimitColumns.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Com_StatLimitMain.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Com_StatLimitRows.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Constant\AreaModel.cs" />
+    <Compile Include="DocModel\DocTableParamModel.cs" />
+    <Compile Include="DocModel\DocTreeModel.cs" />
+    <Compile Include="DocModel\DocTreeResultModel.cs" />
+    <Compile Include="EnumModel\LoginEnum.cs" />
+    <Compile Include="ExtendsionModel\A02Model.cs" />
+    <Compile Include="ExtendsionModel\ComProInfoDalModel.cs" />
+    <Compile Include="ExtendsionModel\ComProInfoModel.cs" />
+    <Compile Include="ExtendsionModel\ComProModel.cs" />
+    <Compile Include="ExtendsionModel\ServiceUserModel.cs" />
+    <Compile Include="ExtendsionModel\T_AskManagerModel.cs" />
+    <Compile Include="ExtendsionModel\T_PageElementModel.cs" />
+    <Compile Include="ExtendsionModel\T_PageFolderModel.cs" />
+    <Compile Include="ExtendsionModel\T_User.cs" />
+    <Compile Include="ExtendsionModel\T_UseWorkerModel.cs" />
+    <Compile Include="ExtendsionModel\WGJG_ZX.cs" />
+    <Compile Include="ExtendsionModel\WGJG_ZXDetail.cs" />
+    <Compile Include="FN_WGJG_GetAllCatalogIDs_Result.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FormatModel\CodeItemsModel.cs" />
+    <Compile Include="FormatModel\DataJsonModel.cs" />
+    <Compile Include="G01.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GS_Develop_SystemFieldHelper_Result.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="HCQ2.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HCQ2.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="HCQ2.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="HCQ2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HCQ2.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="HR_MusterFields.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="HR_MusterMain.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="JsonData\JsonModel.cs" />
+    <Compile Include="JsonData\unitJsonModel.cs" />
+    <Compile Include="My_Auth_AppendUserRole_Result.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="My_BPM_GetRoleUsersOfOu_Result.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="My_Code_Parent_All_Result.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="My_FN_Auth_GetRoleUser_Result.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="My_Org_Parent_All_Result.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="My_SM_SystemMessage_SelectUnNotify_Result.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="My_WidgetModule_Catalog_Parent_All_Result.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="OP_ExcelForm_Args.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="OP_ExcelForm_Catalog.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="OP_ExcelForm_Cell.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="OP_ExcelForm_Col.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="OP_ExcelForm_DataSource.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="OP_ExcelForm_DataSourceParse.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="OP_ExcelForm_Input.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="OP_ExcelForm_InputTable.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="OP_ExcelForm_InputTableField.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="OP_ExcelForm_Main.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="OP_ExcelForm_Privilege.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="OP_ExcelForm_Row.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="OP_ExcelForm_RowCol.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ParamsModel\T_UseWorkerParam.cs" />
+    <Compile Include="Project_LogApi.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="P_QianXin_JinE_Result.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="P_QianXin_ShiJian_Result.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="RC_DataHint.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="RC_DataHintState.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="RC_DataLimit.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="RC_ImportClientDataWay.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="RC_InfoScript.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="RC_InfoScriptOrder.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="RC_JTMain.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="RC_MusterMain.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="RC_PolicyAttach.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="RC_PolicyDetail.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="RC_PolicyGroup.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="RC_SearchContainerResult.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="RC_StatMain.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="RC_StatMusterField.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="RollScreenModel\BigDateMainModel.cs" />
+    <Compile Include="RollScreenModel\RollHelp.cs" />
+    <Compile Include="SelectModel\JobsModel.cs" />
+    <Compile Include="SelectModel\SelectValueModel.cs" />
+    <Compile Include="SM_CodeItems.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SM_CodeTable.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SM_CodeTableGroup.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SM_ConsoleUIGroup.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SM_ConsoleUIItem.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SM_ConsoleUIWay.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SM_ConsoleUIWayRole.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SM_DBConnection.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SM_GlobalScript.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SM_Identity.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SM_Log.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SM_LogCycleTimer.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SM_LogDevelop.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SM_LogSystem.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SM_PersonClass.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SM_Plugin.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SM_Prototype_Simple.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SM_PY.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SM_Scheduler.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SM_SchedulerNotify.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SM_SchedulerPlan.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SM_SchedulerRunLog.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SM_SchedulerTask.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SM_SequenceManage.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SM_SetDB.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SM_SetItemCalc.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SM_SetItems.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SM_SetItemUserConfig.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SM_SetTable.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SM_SetTableUserConfig.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SM_SetWayUserConfig.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SM_SqlTemplet_Args.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SM_SqlTemplet_Catalog.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SM_SqlTemplet_Main.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SM_Stamp_Unit.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SM_Stamp_UnitUser.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SM_SystemKeyValue.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SM_SystemMessage.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SM_SystemModuleKeyFile.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SM_SystemModuleKeyValue.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SM_Theme_ConfigV2.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SM_Theme_ConfigV2_File.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SM_Theme_ConfigV2_Role.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SM_Todo_DataWarn.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SM_Todo_Notice.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SM_UserKeyValue.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SM_UserKeyValueEx.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SM_UserOnlineLogger.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SM_UserRelation.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SM_UserRelationItem.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SM_Version.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SM_Weixin_SystemConfig.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SM_WidgetHomepage_Main.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SM_WidgetHomepage_UserConfig.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SM_WidgetModule_Args.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SM_WidgetModule_Catalog.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SM_WidgetModule_Files.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SM_WidgetModule_Main.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SM_WidgetModule_ObjectConfig.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SM_WidgetModule_Tool.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SM_WidgetModule_ToolBar.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sp_helpdiagramdefinition_Result.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sp_helpdiagrams_Result.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sysdiagrams.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TreeModel\AreaUnitModel.cs" />
+    <Compile Include="TreeModel\DocTreeListModel.cs" />
+    <Compile Include="TreeModel\OrgTableParamModel.cs" />
+    <Compile Include="TreeModel\OrgTreeModel.cs" />
+    <Compile Include="TreeModel\OrgTreeResultModel.cs" />
+    <Compile Include="TreeModel\ProInfoTreeModel.cs" />
+    <Compile Include="T_AreaInfo.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_AreaPermissRelation.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_AskManager.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_B01PermissRelation.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_Complaints.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_CompProInfo.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_DocFolderPermissRelation.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_DocumentFolder.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_DocumentFolderRelation.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_DocumentInfo.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_DocumentSetType.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_ElementPermissRelation.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_EnterDetail.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_Equipment.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_ExceptionLog.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_FilePermissRelation.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_FolderPermissRelation.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_Function.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_Implement.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_ItemCode.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_ItemCodeMenum.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_JobResumeRelation.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_LimitUser.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_Login.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_LogSeting.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_LogSetingDetail.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_MessageNotice.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_ModulePermissRelation.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_OrgFolder.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_OrgUserRelation.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_Org_User.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_PageElement.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_PageFile.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_PageFolder.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_PayAccount.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_PerFuncRelation.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_PermissConfig.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_Permissions.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_Role.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_RoleGroupRelation.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_RolePermissRelation.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_SetMainPage.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_Synchronous.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_SysModule.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_Table.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_TableField.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_TodoList.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_User.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_UserGroup.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_UserGroupRelation.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_UserRoleRelation.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_UserUnitRelation.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_UseWorker.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ViewModel\AttendanceModel.cs" />
+    <Compile Include="ViewModel\CheckModle.cs" />
+    <Compile Include="ViewModel\ComInfoModle.cs" />
+    <Compile Include="ViewModel\MainCheckUnit.cs" />
+    <Compile Include="ViewModel\NpoiPersonModel.cs" />
+    <Compile Include="ViewModel\WorkInformationModel.cs" />
+    <Compile Include="View_A02.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="View_Auth_User.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="View_CatalogDocument.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="View_Com_JetTableItems.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="View_QXTJ.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="V_Auth_Per_00001_System_BPM_Start.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="V_Auth_Per_00001_System_Operation_Start.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="V_Auth_Per_00001_System_Org_Tree.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="V_Auth_Per_00001_System_PersonClass.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="V_Auth_Per_00001_System_Person_Readwrite.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="V_Auth_Per_00002_System_BPM_Start.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="V_Auth_Per_00002_System_Operation_Start.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="V_Auth_Per_00002_System_Org_Tree.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="V_Auth_Per_00002_System_PersonClass.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="V_Auth_Per_00002_System_Person_Readwrite.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="V_Auth_Per_anonymous_System_BPM_Start.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="V_Auth_Per_anonymous_System_Operation_Start.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="V_Auth_Per_anonymous_System_Org_Tree.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="V_Auth_Per_anonymous_System_PersonClass.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="V_Auth_Per_anonymous_System_Person_Readwrite.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="V_Auth_Per_U00000B_System_BPM_Start.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="V_Auth_Per_U00000B_System_Operation_Start.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="V_Auth_Per_U00000B_System_Org_Tree.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="V_Auth_Per_U00000B_System_PersonClass.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="V_Auth_Per_U00000B_System_Person_Readwrite.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="V_Auth_Per_U00000C_System_BPM_Start.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="V_Auth_Per_U00000C_System_Operation_Start.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="V_Auth_Per_U00000C_System_Org_Tree.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="V_Auth_Per_U00000C_System_PersonClass.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="V_Auth_Per_U00000C_System_Person_Readwrite.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="V_Auth_Per_U00000D_System_BPM_Start.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="V_Auth_Per_U00000D_System_Operation_Start.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="V_Auth_Per_U00000D_System_Org_Tree.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="V_Auth_Per_U00000D_System_PersonClass.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="V_Auth_Per_U00000D_System_Person_Readwrite.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="V_Auth_Per_U00000E_System_BPM_Start.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="V_Auth_Per_U00000E_System_Operation_Start.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="V_Auth_Per_U00000E_System_Org_Tree.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="V_Auth_Per_U00000E_System_PersonClass.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="V_Auth_Per_U00000E_System_Person_Readwrite.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="V_Auth_Per_U00000F_System_BPM_Start.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="V_Auth_Per_U00000F_System_Operation_Start.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="V_Auth_Per_U00000F_System_Org_Tree.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="V_Auth_Per_U00000F_System_PersonClass.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="V_Auth_Per_U00000F_System_Person_Readwrite.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="V_Auth_Per_U00000G_System_BPM_Start.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="V_Auth_Per_U00000G_System_Operation_Start.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="V_Auth_Per_U00000G_System_Org_Tree.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="V_Auth_Per_U00000G_System_PersonClass.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="V_Auth_Per_U00000G_System_Person_Readwrite.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="V_Auth_Per_U00000I_System_BPM_Start.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="V_Auth_Per_U00000I_System_Operation_Start.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="V_Auth_Per_U00000I_System_Org_Tree.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="V_Auth_Per_U00000I_System_PersonClass.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="V_Auth_Per_U00000I_System_Person_Readwrite.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="V_Auth_Per_U00000J_System_BPM_Start.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="V_Auth_Per_U00000J_System_Operation_Start.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="V_Auth_Per_U00000J_System_Org_Tree.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="V_Auth_Per_U00000J_System_PersonClass.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="V_Auth_Per_U00000J_System_Person_Readwrite.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="V_Auth_Per_U00000K_System_BPM_Start.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="V_Auth_Per_U00000K_System_Operation_Start.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="V_Auth_Per_U00000K_System_Org_Tree.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="V_Auth_Per_U00000K_System_PersonClass.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="V_Auth_Per_U00000K_System_Person_Readwrite.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="V_Auth_Per_U00000L_System_BPM_Start.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="V_Auth_Per_U00000L_System_Operation_Start.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="V_Auth_Per_U00000L_System_Org_Tree.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="V_Auth_Per_U00000L_System_PersonClass.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="V_Auth_Per_U00000L_System_Person_Readwrite.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="V_Auth_Per_U00000M_System_BPM_Start.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="V_Auth_Per_U00000M_System_Operation_Start.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="V_Auth_Per_U00000M_System_Org_Tree.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="V_Auth_Per_U00000M_System_PersonClass.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="V_Auth_Per_U00000M_System_Person_Readwrite.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="V_Auth_Per_U00000O_System_BPM_Start.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="V_Auth_Per_U00000O_System_Operation_Start.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="V_Auth_Per_U00000O_System_Org_Tree.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="V_Auth_Per_U00000O_System_PersonClass.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="V_Auth_Per_U00000O_System_Person_Readwrite.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="V_Auth_Per_U00000P_System_BPM_Start.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="V_Auth_Per_U00000P_System_Operation_Start.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="V_Auth_Per_U00000P_System_Org_Tree.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="V_Auth_Per_U00000P_System_PersonClass.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="V_Auth_Per_U00000P_System_Person_Readwrite.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="V_Auth_Per_U00000R_System_BPM_Start.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="V_Auth_Per_U00000R_System_Operation_Start.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="V_Auth_Per_U00000R_System_Org_Tree.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="V_Auth_Per_U00000R_System_PersonClass.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="V_Auth_Per_U00000R_System_Person_Readwrite.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="V_Auth_Per_U00000S_System_BPM_Start.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="V_Auth_Per_U00000S_System_Operation_Start.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="V_Auth_Per_U00000S_System_Org_Tree.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="V_Auth_Per_U00000S_System_PersonClass.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="V_Auth_Per_U00000S_System_Person_Readwrite.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="V_Auth_Per_U00000T_System_BPM_Start.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="V_Auth_Per_U00000T_System_Operation_Start.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="V_Auth_Per_U00000T_System_Org_Tree.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="V_Auth_Per_U00000T_System_PersonClass.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="V_Auth_Per_U00000T_System_Person_Readwrite.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="V_Auth_Per_U00000U_System_BPM_Start.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="V_Auth_Per_U00000U_System_Operation_Start.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="V_Auth_Per_U00000U_System_Org_Tree.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="V_Auth_Per_U00000U_System_PersonClass.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="V_Auth_Per_U00000U_System_Person_Readwrite.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="V_Auth_Per_U00000V_System_BPM_Start.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="V_Auth_Per_U00000V_System_Operation_Start.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="V_Auth_Per_U00000V_System_Org_Tree.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="V_Auth_Per_U00000V_System_PersonClass.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="V_Auth_Per_U00000V_System_Person_Readwrite.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="V_Auth_Per_U00000X_System_BPM_Start.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="V_Auth_Per_U00000X_System_Operation_Start.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="V_Auth_Per_U00000X_System_Org_Tree.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="V_Auth_Per_U00000X_System_PersonClass.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="V_Auth_Per_U00000X_System_Person_Readwrite.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="V_Auth_Per_U00000Y_System_BPM_Start.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="V_Auth_Per_U00000Y_System_Operation_Start.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="V_Auth_Per_U00000Y_System_Org_Tree.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="V_Auth_Per_U00000Y_System_PersonClass.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="V_Auth_Per_U00000Y_System_Person_Readwrite.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="V_Auth_Per_U00000Z_System_BPM_Start.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="V_Auth_Per_U00000Z_System_Operation_Start.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="V_Auth_Per_U00000Z_System_Org_Tree.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="V_Auth_Per_U00000Z_System_PersonClass.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="V_Auth_Per_U00000Z_System_Person_Readwrite.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="V_Auth_Per_U000010_System_BPM_Start.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="V_Auth_Per_U000010_System_Operation_Start.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="V_Auth_Per_U000010_System_Org_Tree.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="V_Auth_Per_U000010_System_PersonClass.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="V_Auth_Per_U000010_System_Person_Readwrite.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="V_Auth_Per_U000011_System_BPM_Start.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="V_Auth_Per_U000011_System_Operation_Start.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="V_Auth_Per_U000011_System_Org_Tree.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="V_Auth_Per_U000011_System_PersonClass.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="V_Auth_Per_U000011_System_Person_Readwrite.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="V_Auth_Per_U000012_System_BPM_Start.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="V_Auth_Per_U000012_System_Operation_Start.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="V_Auth_Per_U000012_System_Org_Tree.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="V_Auth_Per_U000012_System_PersonClass.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="V_Auth_Per_U000012_System_Person_Readwrite.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="V_Auth_Per_U000014_System_BPM_Start.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="V_Auth_Per_U000014_System_Operation_Start.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="V_Auth_Per_U000014_System_Org_Tree.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="V_Auth_Per_U000014_System_PersonClass.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="V_Auth_Per_U000014_System_Person_Readwrite.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="V_Auth_Per_U000015_System_BPM_Start.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="V_Auth_Per_U000015_System_Operation_Start.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="V_Auth_Per_U000015_System_Org_Tree.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="V_Auth_Per_U000015_System_PersonClass.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="V_Auth_Per_U000015_System_Person_Readwrite.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="V_My_WidgetModule_Objects.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="WebApiModel\ParamModel\BmqModle.cs" />
+    <Compile Include="WebApiModel\ParamModel\CheckLoginBaseModel.cs" />
+    <Compile Include="WebApiModel\ParamModel\CheckParam.cs" />
+    <Compile Include="WebApiModel\ParamModel\CheckUseWorker.cs" />
+    <Compile Include="WebApiModel\ResultApiModel\OrgModel.cs" />
+    <Compile Include="WebApiModel\ResultApiModel\WageSentDownModel.cs" />
+    <Compile Include="SelectModel\A02Model.cs" />
+    <Compile Include="SelectModel\ListBoxModel.cs" />
+    <Compile Include="SelectModel\T_AskManagerModel.cs" />
+    <Compile Include="SelectModel\WGJG01ChartModel.cs" />
+    <Compile Include="SelectModel\WGJG02ByUnitID.cs" />
+    <Compile Include="SysExtendsionModel\T_Permissions.cs" />
+    <Compile Include="TreeModel\B01PerTreeModel.cs" />
+    <Compile Include="TreeModel\B01TreeModel.cs" />
+    <Compile Include="TreeModel\B01zTreeModel.cs" />
+    <Compile Include="TreeModel\TableStrcutTreeModel.cs" />
+    <Compile Include="TreeModel\TreeTableAttribute.cs" />
+    <Compile Include="UploadModel\Result.cs" />
+    <Compile Include="ViewModel\EchartsVo.cs" />
+    <Compile Include="ViewModel\LoginResultModel.cs" />
+    <Compile Include="ViewModel\LoginUser.cs" />
+    <Compile Include="ViewModel\Permission.cs" />
+    <Compile Include="ViewModel\PunchCardModel.cs" />
+    <Compile Include="ViewModel\SysAdmin\PageElementModel.cs" />
+    <Compile Include="ViewModel\SysAdmin\UserModel.cs" />
+    <Compile Include="ViewModel\TableModel.cs" />
+    <Compile Include="ViewModel\WebAPI\WebApiResultJsonModel.cs" />
+    <Compile Include="ViewModel\WGJG01Model.cs" />
+    <Compile Include="ViewModel\WGJG02Model.cs" />
+    <Compile Include="WebApiModel\ParamModel\AppLogModel.cs" />
+    <Compile Include="WebApiModel\ParamModel\BaseModel.cs" />
+    <Compile Include="WebApiModel\ParamModel\CheckWorkModel.cs" />
+    <Compile Include="WebApiModel\ParamModel\PersonModel.cs" />
+    <Compile Include="WebApiModel\ParamModel\SysLoginModel.cs" />
+    <Compile Include="WebApiModel\ParamModel\WageRegisterModel.cs" />
+    <Compile Include="WeiXinApiModel\ParamModel\BaseWeiXinModel.cs" />
+    <Compile Include="WeiXinApiModel\ParamModel\CompanyModel.cs" />
+    <Compile Include="WeiXinApiModel\ParamModel\DebtQXTJModel.cs" />
+    <Compile Include="WeiXinApiModel\ParamModel\PersonSelect.cs" />
+    <Compile Include="WeiXinApiModel\ParamModel\RepeatWorker.cs" />
+    <Compile Include="WeiXinApiModel\ParamModel\WorkRank.cs" />
+    <Compile Include="WeiXinApiModel\ResultApiModel\CompanyResultModel.cs" />
+    <Compile Include="WeiXinApiModel\ResultApiModel\DebtMoneyResultModel.cs" />
+    <Compile Include="WeiXinApiModel\ResultApiModel\DebtPeopleResultModel.cs" />
+    <Compile Include="WeiXinApiModel\ResultApiModel\DebtQXTJResultModel.cs" />
+    <Compile Include="WF_JobMain.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="WF_JobMainExcludeChoose.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="WF_JobOpinion.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="WF_JobProxy.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="WF_JobSaveOrg.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="WF_JobStep.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="WF_OperationCalc.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="WF_OperationDocument.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="WF_OperationGroup.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="WF_OperationKeyValue.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="WF_OperationMain.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="WF_OperationOutPut.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="WF_OperationSalaryOPItem.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="WF_OperationSalaryOPMain.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="WF_OperationSalaryOPSignItem.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="WF_OperationSalaryOPSignMain.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="WF_OperationSetItemOption.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="WF_OperationSetItems.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="WF_OperationSetTable.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="WF_OperationSetTableOption.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="WF_OperationSTCodeItems.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="WF_OperationSTData.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="WF_OperationStep.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="WF_OperationStepPrivilege.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="WF_OperationSTMain.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="WF_OperationSTSetItems.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="WF_OperationType.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="WGJG01.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="WGJG01_Template.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="WGJG02.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="WGJG02_Template.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="WGJG_GRZX.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="WGJG_WarnData.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="WGJG_ZX.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="XS_Student.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="XS_StudentScore.cs">
+      <DependentUpon>HCQ2.tt</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="DTOModel\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\HCQ2_Common\HCQ2_Common.csproj">
+      <Project>{a401c41a-24ff-4f68-91b5-8b599267a111}</Project>
+      <Name>HCQ2_Common</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EntityDeploy Include="HCQ2.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>HCQ2.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="HCQ2.edmx.diagram">
+      <DependentUpon>HCQ2.edmx</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="HCQ2.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>HCQ2.edmx</DependentUpon>
+      <LastGenOutput>HCQ2.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="HCQ2.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>HCQ2.edmx</DependentUpon>
+      <LastGenOutput>HCQ2.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

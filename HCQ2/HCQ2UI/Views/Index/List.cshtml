@@ -1,0 +1,666 @@
+﻿@{
+    ViewBag.Title = "首页";
+}
+@section headerSection{
+    <link href="~/Resources/mainFrame/css/bootstrap.min14ed.css" rel="stylesheet" />
+    <link href="~/Resources/mainFrame/css/font-awesome.min93e3.css" rel="stylesheet" />
+    <link href="~/Resources/mainFrame/css/animate.min.css" rel="stylesheet" />
+    <link href="~/Resources/mainFrame/css/style.min862f.css" rel="stylesheet" />
+
+    <style>
+        #dataDetail li {
+        }
+
+        .ibox-title {
+            border-color: #fff;
+        }
+
+        td {
+            height: 40px;
+        }
+
+        body {
+            font-family: "微软雅黑";
+            font-size: 13px;
+        }
+    </style>
+}
+<div class="row border-bottom white-bg dashboard-header">
+    <div class="col-sm-12">
+        <div class="col-sm-2">
+            <div class="widget style1 lazur-bg">
+                <div class="row">
+                    <div class="col-xs-4">
+                        <i class="glyphicon glyphicon-road" style="font-size:50px;"></i>
+                    </div>
+                    <div class="col-xs-8 text-right">
+                        <span> 工地数目 </span>
+                        <h2 class="font-bold"><a href="#" style="color:#fff" onclick="StaticNum.Enterprise();">@ViewBag.UnitTypeM</a></h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-2">
+            <div class="widget style1 lazur-bg">
+                <div class="row">
+                    <div class="col-xs-4">
+                        <i class="glyphicon glyphicon-user" style="font-size:50px;"></i>
+                    </div>
+                    <div class="col-xs-8 text-right">
+                        <span> 总人数 </span>
+                        <h2 class="font-bold"><a href="#" style="color:#fff" onclick="StaticNum.PersonCount();">@ViewBag.Count</a></h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-2">
+            <div class="widget style1 lazur-bg">
+                <div class="row">
+                    <div class="col-xs-4">
+                        <i class="glyphicon glyphicon-floppy-remove" style="font-size:50px;"></i>
+                    </div>
+                    <div class="col-xs-8 text-right">
+                        <span> 欠薪人数 </span>
+                        <h2 class="font-bold"><a href="#" style="color:#fff" onclick="StaticNum.QxCount();">@ViewBag.QxCount</a></h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-2">
+            <div class="widget style1 lazur-bg">
+                <div class="row">
+                    <div class="col-xs-4">
+                        <i class="glyphicon glyphicon-remove" style="font-size:50px;"></i>
+                    </div>
+                    <div class="col-xs-8 text-right">
+                        <span> 欠薪金额 </span>
+                        <h2 class="font-bold"><a href="#" style="color:#fff" onclick="StaticNum.QxMoney();">@ViewBag.QxWage</a></h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-2">
+            <div class="widget style1 lazur-bg">
+                <div class="row">
+                    <div class="col-xs-4">
+                        <i class="glyphicon glyphicon-flag" style="font-size:50px;"></i>
+                    </div>
+                    <div class="col-xs-8 text-right">
+                        <span> 今日到岗 </span>
+                        <h2 class="font-bold"><a href="#" style="color:#fff" onclick="StaticNum.CheckPerson();">@ViewBag.Attendance</a></h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-2">
+            <div class="widget style1 lazur-bg">
+                <div class="row">
+                    <div class="col-xs-4">
+                        <i class="glyphicon glyphicon-hourglass" style="font-size:50px;"></i>
+                    </div>
+                    <div class="col-xs-8 text-right">
+                        <span> 待整改 </span>
+                        <h2 class="font-bold"><a href="#" style="color:#fff" onclick="StaticNum.WGJGZX();">@ViewBag.WGJGZX</a></h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="dataDetail" class="col-sm-12">
+        <div class="col-sm-4">
+            <div class="ibox float-e-margins">
+                <div class="ibox-title">
+                    <h5>待办事宜</h5>
+                    <div class="ibox-tools">
+                        <span><a class="line">更多</a></span>
+                    </div>
+                </div>
+                <div class="ibox-content no-padding">
+                    <ul class="list-group">
+                        @{
+                            var data = ViewBag.DBSY;
+                            if (data != null)
+                            {
+                                for (int i = 0; i < data.Count; i++)
+                                {
+                                    <li class="list-group-item">
+                                        @if (data[i].to_title.ToString().Length > 15)
+                                        {
+                                            <span class="badge badge-primary"></span><a class="line" title="@data[i].to_title" onclick="BMQDocument.Todo('@data[i].to_id');">@data[i].to_title.Substring(0, 12)...</a><code class="pull-right">@data[i].to_send_user_name@data[i].to_send_date.ToString("MM/dd")</code>
+                                        }
+                                        else
+                                        {
+                                            <span class="badge badge-primary"></span><a class="line" title="@data[i].to_title" onclick="BMQDocument.Todo('@data[i].to_id');">@data[i].to_title</a><code class="pull-right">@data[i].to_send_user_name@data[i].to_send_date.ToString("MM/dd")</code>
+                                        }
+                                    </li>
+                                    if (i > 3)
+                                    {
+                                        break;
+                                    }
+                                }
+                            }
+                            else
+                            {
+                                <li class="list-group-item">
+                                    <span class="badge badge-primary"></span><a class="line"> 目前没有待办事宜 </a>
+                                </li>
+                            }
+                        }
+                        <li class="list-group-item">
+
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <div class="ibox float-e-margins">
+                <div class="ibox-title">
+                    <h5>政策</h5>
+                    <div class="ibox-tools">
+                        <span><a class="line">更多</a></span>
+                    </div>
+                </div>
+                <div class="ibox-content no-padding">
+                    <ul class="list-group">
+                        @for (int i = 0; i < ViewBag.BMQ.Count; i++)
+                        {
+                            if (i < 4)
+                            {
+                                <li class="list-group-item">
+                                    <span class="badge badge-primary"></span><a class="line" onclick="BMQDocument.Detail('@ViewBag.BMQ[i].DocID');">
+                                        @ViewBag.BMQ[i].DocTitle
+                                    </a>
+                                </li>
+                            }
+                            else
+                            {
+                                break;
+                            }
+                        }
+                        <li class="list-group-item">
+
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <div class="ibox float-e-margins">
+                <div class="ibox-title">
+                    <h5>新闻公告</h5>
+                    <div class="ibox-tools">
+                        <span><a href="#v119" class="line">更多</a></span>
+                    </div>
+                </div>
+                <div class="ibox-content no-padding">
+                    <ul class="list-group">
+                        @{
+                            if (ViewBag.Mess != null)
+                            {
+                                foreach (var item in ViewBag.Mess)
+                                {
+                                    <li class="list-group-item">
+                                        <span class="badge badge-danger"></span> <a href="#" onclick="BMQDocument.Mess('@item.m_id')">(@item.m_type)@item.m_title</a>
+                                    </li>
+                                }
+                            }
+                            else
+                            {
+                                <li class="list-group-item">
+                                    <span class="badge badge-danger"></span> <a href="#">还未发布新闻公告</a>
+                                </li>
+                            }
+                        }
+                        <li class="list-group-item">
+
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--欠薪金额统计-->
+    <div class="col-sm-12">
+        <div class="ibox-title">
+            <h5>欠薪金额统计</h5>
+            <div class="ibox-tools">
+                <span><a class="line">更多</a></span>
+            </div>
+        </div>
+        <div class="ibox float-e-margins">
+            <div class="col-sm-8">
+                <div class="ibox-content" style="padding: 0;padding-top: 5px;">
+                    <div id="echarts-Moneybar-chart" style="width: 100%; height: 420px;"></div>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="ibox-content">
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th>项目名称</th>
+                                <th>保证金</th>
+                                <th>金额（万元）</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @if (ViewBag.QXTJMoney != null)
+                            {
+                           for (int i = 0; i < ViewBag.QXTJMoney.Count; i++)
+                                {
+                                    if (i <= 7)
+                                    {
+                            <tr>
+                                <td>@ViewBag.QXTJMoney[i].B0001Name</td>
+                                <td>@ViewBag.QXTJMoney[i].B0116</td>
+                                <td>@ViewBag.QXTJMoney[i].QXTJ01</td>
+                            </tr>
+                                    }
+                                    else
+                                    {
+                                        break;
+                                    }
+                                }
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!--欠薪人数统计-->
+    <div class="col-sm-12">
+        <div class="ibox-title">
+            <h5>欠薪人数统计</h5>
+            <div class="ibox-tools">
+                <span><a class="line">更多</a></span>
+            </div>
+        </div>
+        <div class="ibox float-e-margins">
+            <div class="col-sm-8">
+                <div class="ibox-content" style="padding: 0;padding-top: 15px;">
+                    <div id="echarts-Personbar-chart" style="width: 100%; height: 420px;"></div>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="ibox-content">
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th>项目名称</th>
+                                <th>总人数</th>
+                                <th>欠薪人数</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @if (ViewBag.QXTJPerson != null)
+                            {
+                                for (int i = 0; i < ViewBag.QXTJPerson.Count; i++)
+                                {
+                                    <tr>
+                                        <td> @ViewBag.QXTJPerson[i].B0001Name </td>
+                                        <td> @ViewBag.QXTJPerson[i].People2 </td>
+                                        <td> @ViewBag.QXTJPerson[i].People </td>
+                                    </tr>
+
+                                }
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--出工排名统计-->
+    <div class="col-sm-12">
+        <div class="ibox-title">
+            <h5>出工排名统计</h5>
+            <div class="ibox-tools">
+                <span><a class="line">更多</a></span>
+            </div>
+        </div>
+        <div class="ibox float-e-margins">
+            <div class="col-sm-8">
+                <div class="ibox-content" style="padding: 0;padding-top: 15px;">
+                    <div id="echarts-a02-chart" style="width: 100%; height: 420px;"></div>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="ibox-content">
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th>项目名称</th>
+                                <th>出工人数</th>
+                                <th>总人数</th>
+                                <th>出工率</th>
+                            </tr>
+                        </thead>
+                        <tbody id="workday">
+                            @*@for (int i = 0; i < ViewBag.QXTJPerson.Count; i++)
+                                {
+                                    <tr>
+                                        <td> @ViewBag.QXTJPerson[i].B0001Name </td>
+                                        <td> @ViewBag.QXTJPerson[i].People2 </td>
+                                        <td> @ViewBag.QXTJPerson[i].People </td>
+                                    </tr>
+
+                                }*@
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--工种人数统计-->
+    <div class="col-sm-12">
+        <div class="ibox-title">
+            <h5>工种统计</h5>
+            <div class="ibox-tools">
+                <span><a class="line">更多</a></span>
+            </div>
+        </div>
+        <div class="ibox float-e-margins">
+            <div class="col-sm-12">
+                <div class="ibox-content" style="padding: 0;padding-top: 15px;">
+                    <div id="echarts-Jobs-chart" style="width: 100%; height: 420px;"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+@section footSection{
+    @Scripts.Render("~/bundles/mainScript")
+    @Scripts.Render("~/bundles/echarts")
+    <script src="~/Resources/businessScript/Statistics/DebtItem.js"></script>
+    <script src="~/Scripts/url-help.js"></script>
+    <script src="~/Resources/layer-3.0.1/layer.js"></script>
+    <script>
+        $(function () {
+            //欠薪金额
+            DrawDebtMoney.DrawTableByData("@Url.Action("GetMoneyData", "DebtStatistics")", "DrawDebtMoney", "echarts-Moneybar-chart");
+            //欠薪人数
+            DrawDebtMoney.DrawTableByData("@Url.Action("GetPersonData", "DebtStatistics")", "DrawDebtPerson", "echarts-Personbar-chart");
+
+            $("#dataDetail a").bind("click", function () {
+                var controller = $(this).text().replace(".", "").replace(".", "").trim();
+                if (controller == "更多")
+                    controller = "v116";
+                $("div[id^='v1']").each(function () {
+                    $(this).addClass("panel-collapse collapse");
+                })
+                $("#" + controller + "").addClass("panel-collapse collapse in");
+            });
+
+            Jobs();
+
+            WorkDays();
+        });
+
+        //统计弹窗
+        var StaticNum = {
+
+            //公司数量
+            Enterprise: function () {
+                layer.open({
+                    type: 2,
+                    title: false,
+                    content: $.GetIISName() + "/Enterprise/GetMainProject",
+                    area: ["95%", "90%"],
+                    maxmin: true
+                });
+            },
+
+            //总人数
+            PersonCount: function () {
+                layer.open({
+                    type: 2,
+                    title: false,
+                    content: $.GetIISName() + "/Person/Index",
+                    area: ["95%", "90%"],
+                    maxmin: true
+                });
+            },
+
+            //欠薪人数
+            QxCount: function () {
+                layer.open({
+                    type: 2,
+                    title: false,
+                    content: $.GetIISName() + "/Enterprise/ProjectQXTJ",
+                    area: ["95%", "90%"],
+                    maxmin: true
+                });
+            },
+
+            //欠薪金额
+            QxMoney: function () {
+                layer.open({
+                    type: 2,
+                    title: false,
+                    content: $.GetIISName() + "/Enterprise/ProjectQXTJ",
+                    area: ["95%", "90%"],
+                    maxmin: true
+                });
+            },
+
+            //今日到岗
+            CheckPerson: function () {
+                layer.open({
+                    type: 2,
+                    title: false,
+                    content: $.GetIISName() + "/Person/MainCheckUnit",
+                    area: ["95%", "90%"],
+                    maxmin: true
+                });
+            },
+
+            //待整改
+            WGJGZX:function(){
+                layer.open({
+                    type: 2,
+                    title: false,
+                    content: $.GetIISName() + "/Company/MainCompay",
+                    area: ["95%", "90%"],
+                    maxmin: true
+                });
+            }
+        }
+
+        //弹窗
+        var BMQDocument = {
+
+            //政策信息
+            Detail: function (documentID) {
+                var index = layer.open({
+                    type: 2,
+                    title: "政策详细信息",
+                    content: $.GetIISName() + "/Index/DocumentDetail?documentID=" + documentID,
+                    area: ["850px", "400px"],
+                    maxmin: true
+                });
+            },
+
+            //待办事宜
+            Todo: function (to_id) {
+                var index = layer.open({
+                    type: 2,
+                    title: "待办事宜",
+                    content: $.GetIISName() + "/Todo/TodoDetail?to_id=" + to_id,
+                    area: ["850px", "400px"],
+                    maxmin: true
+                });
+            },
+
+            Mess:function(m_id){
+                var index = layer.open({
+                    type: 2,
+                    title: "新闻公告",
+                    content: $.GetIISName() + "/NewsMessage/NewsDetail?mess_id=" + m_id,
+                    area: ["850px", "400px"],
+                    maxmin: true
+                });
+            }
+        }
+
+        //工种统计
+        var Jobs = function(){
+            var Jobs = @Html.Raw(ViewBag.Jobs);
+            var JobCount = @Html.Raw(ViewBag.JobsCount);
+            var sals = echarts.init(document.getElementById("echarts-Jobs-chart")),
+            n = {
+                title: { text: "工种统计" },
+                tooltip: {
+                    trigger: 'axis',
+                    axisPointer: {            // 坐标轴指示器，坐标轴触发有效
+                        type: 'shadow'        // 默认为直线，可选为：'line' | 'shadow'
+                    }
+                },
+                legend: {
+                    data: ['人数']
+                },
+                grid: {
+                    left: '3%',
+                    right: '4%',
+                    bottom: '3%',
+                    containLabel: true
+                },
+                grid: { x: 30, x2: 30, y2: 100 },
+                xAxis: [
+                    {
+                        type: 'category',
+                        data:  Jobs,//['一月份', '二月份', '三月份', '四月份', '五月份', '六月份', '七月份', '1月份', '2月份', '3月份', '4月份', '5月份', '6月份'],
+                        axisTick: {
+                            alignWithLabel: true
+                        },axisLabel:{
+                            rotate: 50,
+                            interval :0
+                        }
+                    }
+                ],
+                yAxis: [{
+                    type: "value"
+                }],
+                series: [
+                    {
+                        name: '人数',
+                        type: 'bar',
+                        //barWidth: 10,
+                        data: JobCount, //[10, 52, 200, 120, 50, 80, 130, 52, 200, 120, 50, 80, 130],
+                        itemStyle: {
+                            normal: {
+                                color: '#1AB394',
+                            }
+                        }, markPoint: {
+                            data: [
+                                { type: 'max', name: '最大值' },
+                                { type: 'min', name: '最小值' }
+                            ]
+                        },
+                        markLine: {
+                            data: [
+                                { type: 'average', name: '平均值' }
+                            ]
+                        }
+                    }
+                ]
+            };
+            sals.setOption(n),
+            window.onresize = sals.resize;
+        }
+
+        var WorkDays = function(){
+            $.ajax({
+                type: "post",
+                dataType: "json",
+                url: $.GetIISName() + "/Index/GetWorkDays",
+                async: false,
+                success: function (data) {
+                    var totalPerson= [];
+                    var workDay = [];
+                    var unitName = [];
+
+                    var str = "";
+                    for (var i = 0; i < data.length; i++) {
+
+                        if(i > 7)
+                            break;
+
+                        str += "<tr>";
+                        str += "<td>"+data[i]["unitName"]+"</td>";
+                        str += "<td>"+data[i]["workPerson"]+"</td>";
+                        str += "<td>"+data[i]["totalPerson"]+"</td>";
+                        str += "<td>"+data[i]["pepe"]+"</td>";
+                        str += "</tr>";
+
+                        totalPerson.push(data[i]["totalPerson"]);
+                        workDay.push(data[i]["workPerson"]);
+                        unitName.push(data[i]["unitName"]);
+
+                    }
+                    $("#workday").html(str);
+
+                    var sals = echarts.init(document.getElementById("echarts-a02-chart"));
+                    var n = {
+                        title: {
+                            text: '出工排名',
+                            left: 'center'
+                        },
+                        tooltip: {
+                            trigger: 'item',
+                            formatter: '{a} <br/>{b} : {c}'
+                        },
+                        legend: {
+                            left: 'left',
+                            data: ['总人数',"出工人数"]
+                        },
+                        xAxis: {
+                            type: 'category',
+                            name: '名称',
+                            splitLine: { show: false },
+                            axisTick: {
+                                alignWithLabel: true
+                            },axisLabel:{
+                                rotate: 30,
+                                interval :0
+                            },
+                            data: unitName
+                        },
+                        //grid: {
+                        //    left: '3%',
+                        //    right: '4%',
+                        //    bottom: '3%',
+                        //    containLabel: true
+                        //},
+                        grid: { x: 40, x2: 20, y2: 100 },
+                        yAxis: {
+                            type: 'value',
+                            name: '人'
+                        },
+                        series: [
+                            {
+                                name: '总人数',
+                                type: 'line',
+                                data: totalPerson//[5, 3, 50, 27, 8, 247, 741,200]//
+                            },
+                            {
+                                name: '出工人数',
+                                type: 'line',
+                                data: workDay//[95, 83, 250, 127, 48, 247, 41,100]//
+                            }
+                        ]
+                    };
+                    sals.setOption(n);
+                }
+            })
+        }
+    </script>
+}
